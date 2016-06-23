@@ -1,0 +1,26 @@
+{
+  "name": "shop-formulas",
+  "title": "Shop Formulas",
+  "description": "Best project ever.",
+  "version": "0.1.0",
+  "homepage": "http://www.shop-formulas.com/",
+  "author": {
+    "name": "Montana Studio",
+    "email": "mauro@montana-studio.com",
+    "url": "http://www.montana-studio.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mediatrends/shop-formulas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mediatrends/shop-formulas/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.shop-formulas.com//blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": []
+}
