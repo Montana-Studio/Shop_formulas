@@ -1,0 +1,40 @@
+body {
+	@include span-columns(12);
+	@include pad(0);
+	margin:0;
+	font:{family:$first_font;}
+}
+a {
+	text:{decoration:none;}
+}
+.wrapper {
+	@include span-columns(12);
+}
+.content-windows {
+	@include pad(0 10px);
+	@include span-columns(12);
+	@include media($notebook) {
+		@include outer-container(1120px); 
+		float: initial;
+		margin:0 auto !important;
+		@include pad(0);
+	}
+	@include media($desktop) {
+		@include outer-container(80%); 
+		float: initial;
+		margin:0 auto !important;
+		@include pad(0);
+	}
+}
+.title-section {
+	color:$color_3;
+	text:{transform:uppercase;}
+	font:{size:1.2em;}
+	margin:10px 0;
+	@include media($notebook) {
+		font:{size: 1.6em;}
+	}
+	@include media($desktop) {
+		font:{size: 2.1em;}
+	}
+}

@@ -1,20 +1,31 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<footer class="footer">
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				<div class="content-windows">
+					<p class="copyright">
+						&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
+						<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
+					</p>
+				</div>
 
 			</footer>
-			<!-- /footer -->
 
 		</div>
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
+
+		<script>
+            
+			var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true,
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev',
+		        spaceBetween: 30
+		    });
+
+        </script>
 
 		<!-- analytics -->
 		<script>

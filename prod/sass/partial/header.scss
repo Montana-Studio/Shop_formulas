@@ -1,0 +1,157 @@
+.header {
+	@include row();
+	.barra-top {
+		@include row();
+		height: 45px;
+		background:$color_1;
+		display: none;
+		@include media($tabletLand) {
+			display: block;
+		}
+		@include media($notebook) {
+			display: block;
+		}
+		a {
+			font:{size:(0.7em);}
+			color:$color_3;
+			@include media($desktop) {
+				font:{size:(0.8em);}
+			} 
+		}
+		.box-left {
+			@include span-columns(5);
+			@include omega();
+			display: inline-block;
+			@include media($desktop) {
+				@include span-columns(4);
+				@include omega();
+				display: inline-block;
+			}
+			ul {
+				@include span-columns(12);
+				@include omega();
+				margin:0;
+				padding:0;
+				height: 45px;
+				display: table;
+				li {
+					list-style: none;
+					display: table-cell;
+					vertical-align: middle;
+					a {
+						font:{size:0.7em;}
+						.flags-menu {
+							display: inline-block;
+							padding:{right:4px;}
+						}
+					}
+				}
+			}
+		}
+		.box-right {
+			@include span-columns(3);
+			@include omega();
+			float: right;
+			text:{align:right;}
+			@include media($notebook) {
+				@include span-columns(2.5);
+				@include omega();
+				float: right;
+			}
+			@include media($desktop) {
+				@include span-columns(2);
+				@include omega();
+				float: right;
+			}
+			ul {
+				@include span-columns(12);
+				@include omega();
+				margin:0;
+				padding:0;
+				height: 45px;
+				display: table;
+				li {
+					list-style: none;
+					display: table-cell;
+					vertical-align: middle;
+					.carro-menu {
+						font:{size:(0.7em);weight:bold;}
+						color:$color_2;
+						text:{transform:uppercase;}
+						@include media($desktop) {
+							font:{size:(0.8em);}
+						}
+					}
+					.carro-menu-item {
+						display: block;
+    					line-height: 12px;
+    					color:$color_3;
+					}
+					&:first-child {
+						a {
+							border-right:1px solid $color_3;
+							padding:{right:20px;}
+						}
+					}
+				}
+			}
+		}
+	}
+	.header-logo {
+		@include span-columns(12);
+		padding:10px; 
+		@include media($notebook) {
+			padding:20px 0;
+		}
+		.logo {
+			@include span-columns(4);
+			@include media($notebook) {
+				@include span-columns(2);
+			}
+			@include media($desktop) {
+				@include span-columns(1.8);
+			}
+			a {
+				@include span-columns(12);
+				img {
+				 	width: 100%;
+				 	height: auto;
+				 	display: block;
+				}
+			}
+		}
+	}
+	.nav-desktop {
+		@include span-columns(12);
+		@include omega();
+		height: 40px;
+		background:$color_2;
+		display: none;
+		@include media($tabletLand) {
+			display: block;
+		}
+		@include media($notebook) {
+			display: block;
+		}
+		ul {
+			@include span-columns(12);
+			margin:0;
+			padding:0;
+			li {
+				list-style:none;
+				display: inline-table;
+				height: 30px;
+				padding:10px 0;
+				a {
+					display: table-cell;
+					vertical-align: middle;
+					color:$white;
+					font:{weight:bold;}
+					border-right:1px solid $white;
+					font:{size: 0.8em;}
+					padding:0 10px;
+				}
+			}
+		}
+	}
+}

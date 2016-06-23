@@ -98,17 +98,8 @@ function html5blank_header_scripts()
        // wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
        // wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('html5blankscripts'); // Enqueue it!
-    }
-}
-
-// Load HTML5 Blank conditional scripts
-function html5blank_conditional_scripts()
-{
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
+        wp_enqueue_script( 'library', get_template_directory_uri() .'/js/library.min.js',array(),'20160424', true ); 
+        wp_enqueue_script('html5blankscripts', get_template_directory_uri() . '/js/shop-formulas.min.js', array(), '1.0.0', true); // Enqueue it!
     }
 }
 
@@ -118,8 +109,10 @@ function html5blank_styles()
     //wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     //wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('librarycss', get_template_directory_uri() . '/css/library.min.css', array(), '1.0', false);  
+    wp_register_style('html5blank', get_template_directory_uri() . '/css/shop-formulas.css', array(), '1.0', 'all'); 
     wp_enqueue_style('html5blank'); // Enqueue it!
+    wp_enqueue_style('librarycss'); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation
@@ -341,7 +334,7 @@ function html5blankcomments($comment, $args, $depth)
 
 // Add Actions
 add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
+//add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
@@ -458,5 +451,9 @@ function jk_dequeue_styles( $enqueue_styles ) {
     unset( $enqueue_styles['woocommerce-smallscreen'] );    // Remove the smallscreen optimisation
     return $enqueue_styles;
 }
+
+//   Remove Emoji
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 ?>

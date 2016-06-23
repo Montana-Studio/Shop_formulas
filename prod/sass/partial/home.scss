@@ -1,0 +1,72 @@
+.slider-section {
+	.slider-home {
+		@include row();
+		border-top:1px solid $white;
+		height:300px;
+		background:$color_2;
+		@include media($notebook) {
+			height:400px;
+		}
+		@include media($desktop) {
+			height:500px;
+		}
+		.swiper-wrapper {
+			text:{align:center;}
+			color:$white;
+			font:{size:5em;}
+		}
+		.swiper-pagination {
+			.swiper-pagination-bullet {
+				background:$white;
+			}
+		}
+	    .swiper-button-next {
+		    color:$white;
+		    font:{size: 4em;}
+			background:none;
+			top: 40%;
+		}
+		.swiper-button-prev {
+		    color:$white;
+		    font:{size: 4em;}
+		   	background:none;
+		   	top: 40%;
+		} 
+	}	
+} 
+.servicios-section {
+	@include span-columns(12);
+	margin:{top:10px;}
+	@include media($notebook) {
+		margin:{top:30px;}
+	}
+	.categorias-home {
+		@include span-columns(12);
+		ul {
+			@include span-columns(12);
+			@include pad(0);
+			margin:0;
+			li {
+				@include span-columns(12);
+				margin:{bottom:10px;}
+				@include media($notebook) {
+					@include span-columns(4);
+				}
+				.category-boxes {
+					@include span-columns(12);
+					height: 300px;
+					display: inline-block;
+					&.hum-category {
+						background: $color_2;
+					}
+					&.sum-category {
+						background: $color_4;
+					}
+					&.vet-category {
+						background: $color_5;
+					}	
+				}
+			}
+		}
+	}
+}
