@@ -46,29 +46,14 @@
 			</div>
 		</section>
 
-		<section>
+		<section class="products-home">
 				
 				<?php 
 					global $wp_customize;
 					echo '<div class="content-windows">';
-					/* SECTION HEADER */
-					$zerif_latestnews_title = get_theme_mod('zerif_latestnews_title');
-					/* title */
-					if( !empty($zerif_latestnews_title) ):
-					echo '<h2 class="title-section">' . wp_kses_post( $zerif_latestnews_title ) . '</h2>';
-					else:
-					echo '<h2 class="title-section">' . __('Latest news','zerif-lite') . '</h2>';
-					endif;
-					/* subtitle */
-					$zerif_latestnews_subtitle = get_theme_mod('zerif_latestnews_subtitle');
-					if( !empty($zerif_latestnews_subtitle) ):
-					echo '<div class="section-legend">'.wp_kses_post( $zerif_latestnews_subtitle ).'</div>';
-					elseif ( isset( $wp_customize ) ):
-					echo '<div class="section-legend zerif_hidden_if_not_customizer"></div>';
-					endif;
-					echo '</div><!-- END .section-header -->';
-					echo '<div class="clear"></div>';
-					echo do_shortcode('[recent_products per_page="4" columns="4"]'); 
+					echo '<h3 class="subtitle-section">' . 'Ultimos productos' . '</h3>';
+					echo do_shortcode('[recent_products per_page="12" columns="4" orderby="date"]'); 
+					echo '</div>';
 				?>
 
 		</section>

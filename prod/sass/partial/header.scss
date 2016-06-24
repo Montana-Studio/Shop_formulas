@@ -54,12 +54,12 @@
 			float: right;
 			text:{align:right;}
 			@include media($notebook) {
-				@include span-columns(2.5);
+				@include span-columns(2.7);
 				@include omega();
 				float: right;
 			}
 			@include media($desktop) {
-				@include span-columns(2);
+				@include span-columns(2.4);
 				@include omega();
 				float: right;
 			}

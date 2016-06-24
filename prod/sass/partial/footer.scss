@@ -1,0 +1,143 @@
+.footer {
+	@include span-columns(12);
+	.newsletter-add {
+		@include span-columns(12);
+		background:$color_2;
+		@include media($notebook) {
+			padding:{bottom:10px;}
+		}
+		.title-section {
+			color:$white;
+			@include media($desktop) {
+				padding:{bottom:10px;}
+			}
+		}
+		form {
+			.input-form {
+				@include media($notebook) {
+					@include span-columns(4);
+					margin:{right:10px;}
+				}
+			}
+			.button-news {
+				@include span-columns(12);
+				background:none;
+				border:1px solid $white;
+				color:$white;
+				font:{size:0.7em;}
+				margin:{top:0;bottom:10px;}
+				text:{transform:uppercase;align:center;}
+				padding:0.7em 1em;
+				outline:none;
+				@include media($notebook) {
+					font:{size:0.7em;}
+				}
+				@include media($notebook) {
+					@include span-columns(4);
+					margin:0;
+				}
+				@include media($notebook) {
+					@include pad(13px 10px);
+					font:{size:0.8em;}
+				}
+			}
+		}
+	}
+	.contact-footer {
+		@include span-columns(12);
+		background:url('http://local.mediatrends/Montana-Studio/sitios/shop-formulas/app/wp-content/themes/shop-formulas/img/google-map.jpg');	
+		@include media($notebook) {
+			padding:50px 0;
+		}	
+		form {
+			@include span-columns(12);
+			.left-form {
+				@include span-columns(12);
+				@include media($notebook) {
+					@include span-columns(6);
+					display: inline-block;
+					margin:{right: 10px;}
+				}
+			}
+			.right-form {
+				@include span-columns(12);
+				@include media($notebook) {
+					@include span-columns(6);
+					margin:0;
+					display: inline-block;
+				}
+				.button-blue {
+					@include span-columns(5);
+					float:right;
+					outline:none;
+					text:{align:center;}
+				}
+			}	
+		}
+	}
+	.menu-footer {
+		@include span-columns(12);
+		background:#292929;
+		.nav-footer {
+			ul {
+				@include span-columns(12);
+				margin:0;
+				padding:10px 0;
+				@include media($notebook) {
+					padding:20px 0;
+				}
+				li {
+					list-style:none;
+					display: inline-table;
+					height: 30px;
+					padding:0;
+					a {
+						display: table-cell;
+						vertical-align: middle;
+						color:$white;
+						font:{weight:bold;}
+						font:{size: 0.8em;}
+						padding:0 10px;
+					}
+				}
+			}
+		}
+	}
+	.info-footer {
+		@include span-columns(12);
+		background:#222222;
+		height: 200px;
+		@include media($notebook) {
+			height: 250px;
+		}
+		@include media($desktop) {
+			height: 300px;
+		}
+		.footer-box {
+			@include span-columns(12);
+			li {
+				@include span-columns(12);
+				@include media($notebook) {
+					@include span-columns(3);
+					@include omega(4n);
+				}
+			}
+		}
+	}
+	.copy-right {
+		@include span-columns(12);
+		background:#202020;
+		.copy-info {
+			color:$color_3;
+			text:{align:center;}
+			font:{size:0.6em;style:italic;}
+			padding:10px;
+			@include media($notebook) {
+				padding:20px;
+			}
+			@include media($desktop) {
+				padding:25px;
+			}
+		}
+	}
+}

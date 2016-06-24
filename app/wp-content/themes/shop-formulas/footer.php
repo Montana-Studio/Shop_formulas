@@ -1,11 +1,48 @@
 			<!-- footer -->
 			<footer class="footer">
 
-				<div class="content-windows">
-					<p class="copyright">
-						&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-						<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-					</p>
+				<div class="newsletter-add">
+					<div class="content-windows">
+						<div class="content-mobile">
+							<h3 class="title-section">SUSCRÍBETE A NUESTRO NEWSLETTER</h3>
+							<form>
+								<input type="text" placeholder="Nombre" class="input-form">
+								<input type="correo" placeholder="Correo Electrónico" class="input-form">
+								<input type="submit" class="button-news" value="Suscribir">
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-footer">
+					<div class="content-windows">
+						<h3 class="title-section">Contactanos</h3>
+						<form>
+							<div class="left-form">
+								<input type="text" placeholder="Nombre" class="input-form">
+								<input type="correo" placeholder="Correo Electrónico" class="input-form">
+								<input type="text" placeholder="Asunto" class="input-form">
+							</div>
+							<div class="right-form">
+								<textarea cols="30" rows="8" placeholder="Mensaje" class="input-form"></textarea>
+								<input type="submit" class="button-blue" value="Suscribir">
+							</div> 
+						</form>
+					</div>
+				</div>
+
+				<div class="menu-footer">
+					<div class="content-windows">
+						<nav class="nav-footer">
+							<?php html5blank_nav(); ?>
+						</nav>
+					</div> 
+				</div>
+				<div class="info-footer">
+					
+				</div>
+				<div class="copy-right">
+					<div class="copy-info">Coppyright © 2016. All Rights Reserved. Powered by Montana Studio</div>
 				</div>
 
 			</footer>
@@ -16,8 +53,8 @@
 		<?php wp_footer(); ?>
 
 		<script>
-            
-			var swiper = new Swiper('.swiper-container', {
+
+			var swiper = new Swiper('.slider-home', {
 		        pagination: '.swiper-pagination',
 		        paginationClickable: true,
 		        nextButton: '.swiper-button-next',

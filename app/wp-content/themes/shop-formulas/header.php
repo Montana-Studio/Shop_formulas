@@ -69,7 +69,7 @@
 
 					<div class="nav-desktop">
 						<div class="content-windows">
-							<nav class="nav" role="navigation">
+							<nav class="nav">
 								<?php html5blank_nav(); ?>
 							</nav>
 						</div>
